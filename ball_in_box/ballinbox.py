@@ -64,7 +64,7 @@ def max_circle_one_point(ox, oy, circles, blockers):
     if (not (ox <= 1 and ox >= -1)) \
             or (not (oy <= 1 and oy >= -1)):
         return 0
-    minb = min(ox+1, 1-ox, oy+1, 1+oy)
+    minb = min(ox+1, 1-ox, oy+1, 1-oy)
     minc = 2
     for circle in circles:
         if math.sqrt((ox - circle[0])**2 + (oy - circle[1])**2) - circle[2] < minc:
